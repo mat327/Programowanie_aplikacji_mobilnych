@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Laboratorium_02v2</string>
+    <string name="przelicz_z">Przelicz z :</string>
+    <string name="na">Na :</string>
+    <string name="podaj_warto_do_przeliczenia">Podaj wartość do przeliczenia :</string>
+    <string name="przeliczona_warto">Przeliczona wartość :</string>
+    <string name="hint">hint</string>
+    <string name="warto_c_do_przeliczenia">Wartośc do przeliczenia</string>
+    <string-array name="waluta">
+        <item>PLN</item>
+        <item>USD</item>
+        <item>EURO</item>
+    </string-array>
+</resources>

@@ -1,0 +1,60 @@
+Mateusz Białek 235475
+data: 24.03.2020 r
+
+Sekwencje komunikatów po:
+-Uruchomieniu aplikacji
+	-onCreate
+	-onStart
+	-onResume
+
+-Powrocie do zminimalizowanej aplikacji
+	-onRestart
+	-onStart
+	-onResume
+
+-Kliknięciu programowego przycisku EXIT (w oknie aplikacji)
+	-onPause
+	-onStop
+	-onDestroy
+Dzieje się tak ponieważ to była ostatnia aktywność aplikacji.
+
+-Kliknięciu sprzętowego przycisku BACK (na telefonie) 
+	-onPause
+	-onStop
+	-onDestroy
+
+-Kliknięciu sprzętowego przycisku HOME (na telefonie)
+	-onPause
+	-onSaveInstance
+	-onStop
+Aplikacja jest minimalizowana, warto zauważyć iż jest wywoływane onSaveInstance.
+
+-Kliknięciu sprzętowego przycisku Recent (na telefonie)
+	-onPause
+	-onSaveInstance
+	-onStop
+
+-Kliknięciu przycisku połączenia telefonicznego 
+	-onPause
+Wywołane jest tylko onPause inaczej jak na prezentacji online.
+
+-Przytrzymaniu przycisku odłożenia słuchawki 
+	-onResume
+
+-Otrzymaniu tekstowej wiadomości SMS
+	-onPause
+	-onSaveInstance
+	-onStop
+
+-Przy obróceniu telefonu
+	-onPause
+	-onSaveInstance
+	-onStop
+	-onDestroy
+	-onCreate
+	-onStart
+	-onRestoreInstance
+	-onResume
+Ponieważ wygląd aplikacji może być inny jest ona zabijana i tworzona na nowo.
+
+Po wywołaniu onDestroy ustawienia aplikacji zostają utracone.

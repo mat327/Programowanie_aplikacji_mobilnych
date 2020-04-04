@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Laboratorium_1</string>
+    <string name="spy_text">Spy Text</string>
+    <string name="green">green</string>
+    <string name="exit">Exit</string>
+    <string name="blue">blue</string>
+    <string name="red">red</string>
+</resources>

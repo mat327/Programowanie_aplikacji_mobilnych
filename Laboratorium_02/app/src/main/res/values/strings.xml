@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Laboratorium_02</string>
+    <string name="euro">EURO</string>
+    <string name="usd">USD</string>
+    <string name="pln">PLN</string>
+    <string name="wyczy">Wyczyść</string>
+    <string name="przelicz">przelicz</string>
+</resources>
