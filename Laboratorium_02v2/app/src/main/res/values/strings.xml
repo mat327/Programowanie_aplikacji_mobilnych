@@ -6,9 +6,4 @@
     <string name="przeliczona_warto">Przeliczona wartość :</string>
     <string name="hint">hint</string>
     <string name="warto_c_do_przeliczenia">Wartośc do przeliczenia</string>
-    <string-array name="waluta">
-        <item>PLN</item>
-        <item>USD</item>
-        <item>EURO</item>
-    </string-array>
 </resources>
