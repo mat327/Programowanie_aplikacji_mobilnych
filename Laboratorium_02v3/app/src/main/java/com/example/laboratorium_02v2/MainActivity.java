@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     //zmienna przechowująca wartość spinnera
     String spin1="";
     //nowy format
-    DecimalFormat Df = new DecimalFormat("###,###,###,###.00");
+    DecimalFormat Df = new DecimalFormat("###,###,###,##0.00");
 
     Button button1;
     Button button2;
