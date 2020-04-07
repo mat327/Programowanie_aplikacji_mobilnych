@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Laboratorium_02v2</string>
+    <string name="warto_c_do_przeliczenia">Wartośc do przeliczenia</string>
+    <string name="podaj_warto_napiwku_w">Podaj wartość napiwku w % :</string>
+    <string name="kwota_napiwku">Kwota napiwku :</string>
+    <string name="procentowa_warto_napiwku">procentowa wartość napiwku</string>
+    <string name="podaj_warto_zam_wienia">Podaj wartość zamówienia :</string>
+    <string name="warto_zam_wienia">Wartość zamówienia</string>
+    <string name="czy_jedzenie_by_o_smaczne">Czy jedzenie było smaczne ?</string>
+    <string name="jaka_jest_ocena_jako_ci_obs_ugi">Jaka jest ocena jakości obsługi?</string>
+    <string name="warto_zam_wienia_w_z">Wartość zamówienia w zł</string>
+</resources>
