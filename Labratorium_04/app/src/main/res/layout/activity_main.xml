@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/WysSMS"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wyświetl stronę www :" />
+
+        <EditText
+            android:id="@+id/Strona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Adres strony WWW" />
+
+        <Button
+            android:id="@+id/WysStrone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wyświetl Strone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout1"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wyślij wiadomość SMS :" />
+
+        <EditText
+            android:id="@+id/Numer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numer telefonu" />
+
+        <EditText
+            android:id="@+id/Tresc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Treść" />
+
+        <Button
+            android:id="@+id/WysSms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wyślij SMS" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout1">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pokaż na mapie  :" />
+
+        <EditText
+            android:id="@+id/Szerokosc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Szerokość" />
+
+        <EditText
+            android:id="@+id/Dlugosc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Długość" />
+
+        <Button
+            android:id="@+id/Mapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pokaż na mapie" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wybierz kontakt z listy :" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wybrany kontakt" />
+
+
+        <Button
+            android:id="@+id/Wybierz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wybierz z listy" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout3">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wyświetl dane studenta :" />
+
+        <EditText
+            android:id="@+id/Indeks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numer indeksu" />
+
+
+        <Button
+            android:id="@+id/WysIndeks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wyślij indeks" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout5">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Otrzymana odpowiedź" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
