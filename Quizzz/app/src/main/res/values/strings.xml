@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Quizzz</string>
+    <string name="Informacje">Test jednokrotnego wyboru.\n
+        Aby rozpocząć test wybierz przycisk start na ekranie głownym.\n
+        Aby wybrać ilość pytań na które chesz odpowiedzieć wybierz przycisk opcje na ekranie głownym. Wartość podstawowa to 8 pytań.\n
+        Aby wyjść z aplikacji wybierz przycisk wyjście na ekranie głownym.\n
+        \n
+        Autor aplikacji : Mateusz Białek 235475</string>
+</resources>
