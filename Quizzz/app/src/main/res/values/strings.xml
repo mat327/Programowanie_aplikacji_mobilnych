@@ -4,6 +4,9 @@
         Aby rozpocząć test wybierz przycisk start na ekranie głownym.\n
         Aby wybrać ilość pytań na które chesz odpowiedzieć wybierz przycisk opcje na ekranie głownym. Wartość podstawowa to 8 pytań.\n
         Aby wyjść z aplikacji wybierz przycisk wyjście na ekranie głownym.\n
+        Po wybraniu odpowiedzi należy nacisnąć przycisk sprawdź, poprawna odpowiedź będzie miała kolor zielony.\n
+        W przypadku wybrania niepoprawnej odpowiedź będzie miała ona kolor czerwony.\n
+        Po sprawdzeniu należy nacisnąć przycisk następne aby przejść do kolejnego pytania.\n
         \n
         Autor aplikacji : Mateusz Białek 235475</string>
 </resources>

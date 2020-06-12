@@ -17,6 +17,18 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "activity_main";
    private Button btnStart, btnInfo, btnOptions, btnExit; // deklaracja przycisków
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("quantity_of_questions", quantity_of_questions);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        quantity_of_questions = savedInstanceState.getInt("quantity_of_questions");
+
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -44,9 +56,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        btnStart = (Button) findViewById(R.id.btnStart);
         btnOptions = (Button) findViewById(R.id.btnOptions);
         btnInfo = (Button) findViewById(R.id.btnInfo);
         btnExit = (Button) findViewById(R.id.btnExit);
+
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "OnClick : button Start clicked");
+                openActivity_Start();
+            }
+        });
 
         btnOptions.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +93,15 @@ public class MainActivity extends AppCompatActivity {
                 System.exit(0);
             }
         });
+    }
+
+    public void  openActivity_Start(){//przejście do activity_game
+        Intent intent = new Intent(MainActivity.this, activity_game.class);
+        Bundle OptionsBundle = new Bundle();
+        OptionsBundle.putInt("quantity_of_questions", quantity_of_questions);
+        intent.putExtras(OptionsBundle);
+        startActivity(intent);
+        Log.d(TAG, "openActivity_Game : sending quantity of questions");
     }
 
     public void openActivity_Options(){ //przejście do activity_options

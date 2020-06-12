@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class activity_options extends AppCompatActivity {
@@ -31,7 +33,10 @@ public class activity_options extends AppCompatActivity {
         final Intent myLocalIntent = getIntent();
         final Bundle myBundle = myLocalIntent.getExtras();
 
+        final List<question> questions_list = GenerateListOfQuestions();//pobranie z bazy danych list pytań
+
         quantity_of_questions.setText(String.valueOf(myBundle.getInt("quantity_of_questions")));// ustawienie tekstu na wartość odebraną od activity_main
+
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,8 +45,8 @@ public class activity_options extends AppCompatActivity {
 
                 try {
                     quantity = Integer.parseInt(quantity_of_questions.getText().toString()); // zapisanie do zmiennej ilości pytań
-                    if(quantity<1 || quantity>10){ //warunek sprawdzający czy podana liczba jest w wymaganym przedziale
-                        Toast.makeText(getApplicationContext(), "Ilość pytań musi zawierać się w przedziale od 1 do 10.", Toast.LENGTH_LONG).show(); //informacja o złej wartości
+                    if(quantity<1 || quantity>questions_list.size()){ //warunek sprawdzający czy podana liczba jest w wymaganym przedziale
+                        Toast.makeText(getApplicationContext(), "Ilość pytań musi zawierać się w przedziale od 1 do "+questions_list.size()+".", Toast.LENGTH_LONG).show(); //informacja o złej wartości
                     }
                     else{ //przejście do activity_main
                         myBundle.putInt("result", quantity);
@@ -55,5 +60,13 @@ public class activity_options extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public List<question> GenerateListOfQuestions(){ //funkja uzyskująca liste pytań z bazy danych
+        DataBaseHelper dataBaseHelper = new DataBaseHelper(activity_options.this);
+        List<question> returnList = new ArrayList<>();
+        returnList = dataBaseHelper.ReturnQuestionsList();
+
+        return returnList;
     }
 }
