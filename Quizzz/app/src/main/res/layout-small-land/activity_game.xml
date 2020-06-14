@@ -8,47 +8,11 @@
     tools:context=".activity_game">
 
 
-    <Button
-        android:id="@+id/btnCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Sprawdź"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnNext"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
-
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Następne"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnCheck"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
-
     <ScrollView
-        android:id="@+id/scrollView3"
+        android:id="@+id/srcollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +30,7 @@
                 android:gravity="center_horizontal"
                 android:text="TextView"
                 android:textColor="@android:color/background_light"
-                android:textSize="20sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/question"
@@ -79,17 +43,18 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:text="question"
-                android:textColor="@android:color/background_light" />
+                android:textColor="@android:color/background_light"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/btnAnswer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginRight="2dp"
+                android:layout_marginRight="8dp"
                 android:text="Button"
                 android:textSize="10sp" />
 
@@ -98,10 +63,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginRight="2dp"
+                android:layout_marginRight="8dp"
                 android:text="Button"
                 android:textSize="10sp" />
 
@@ -110,10 +75,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginRight="2dp"
+                android:layout_marginRight="8dp"
                 android:text="Button"
                 android:textSize="10sp" />
 
@@ -122,14 +87,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginRight="2dp"
+                android:layout_marginRight="8dp"
                 android:text="Button"
                 android:textSize="10sp" />
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="Sprawdź"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/srcollView" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="Następne"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCheck"
+        app:layout_constraintTop_toBottomOf="@id/srcollView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -98,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Sprawdź"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/btnNext"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAnswer4" />
@@ -111,7 +111,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
         android:text="Następne"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnCheck"
         app:layout_constraintTop_toBottomOf="@+id/btnAnswer4" />

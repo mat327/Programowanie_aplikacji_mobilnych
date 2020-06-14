@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     int quantity_of_questions = 8; //ilość pytań
 
     private static final String TAG = "activity_main";
-   private Button btnStart, btnInfo, btnOptions, btnExit; // deklaracja przycisków
+   private Button btnStart, btnAddQuestion, btnInfo, btnOptions, btnExit; // deklaracja przycisków
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnStart = (Button) findViewById(R.id.btnStart);
+        btnAddQuestion = (Button) findViewById(R.id.btnAddQuestion);
         btnOptions = (Button) findViewById(R.id.btnOptions);
         btnInfo = (Button) findViewById(R.id.btnInfo);
         btnExit = (Button) findViewById(R.id.btnExit);
@@ -66,6 +67,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d(TAG, "OnClick : button Start clicked");
                 openActivity_Start();
+            }
+        });
+
+        btnAddQuestion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "OnClick : button Add Question clicked");
+                openActivity_AddQuestion();
             }
         });
 
@@ -102,6 +111,11 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtras(OptionsBundle);
         startActivity(intent);
         Log.d(TAG, "openActivity_Game : sending quantity of questions");
+    }
+
+    public void openActivity_AddQuestion(){//przejście do activity_addquestion
+        Intent intent = new Intent(this, activity_addquestion.class);
+        startActivity(intent);
     }
 
     public void openActivity_Options(){ //przejście do activity_options

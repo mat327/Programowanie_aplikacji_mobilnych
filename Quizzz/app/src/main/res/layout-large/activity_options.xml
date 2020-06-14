@@ -50,6 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Zapisz i wróć"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quantity_of_questions" />

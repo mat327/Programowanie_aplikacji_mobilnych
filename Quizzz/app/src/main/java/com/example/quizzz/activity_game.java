@@ -285,6 +285,13 @@ public class activity_game extends AppCompatActivity {
     public void NextQuestion() {
 
         if (number_of_question == quantity_of_questions + 1) {//warunek kończący grę
+            Intent intent = new Intent(activity_game.this, activity_endgame.class);
+            Bundle ResultsBundle = new Bundle();
+            ResultsBundle.putInt("quantity_of_questions", quantity_of_questions);
+            ResultsBundle.putInt("player_points", player_points);
+            intent.putExtras(ResultsBundle);
+            startActivity(intent);
+            Log.d(TAG, "openActivity_EndGame : sending quantity of questions, player points");
             finish();
         } else {
             question.setText(random_question.getQuestion());
