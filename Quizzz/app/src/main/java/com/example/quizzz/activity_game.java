@@ -130,11 +130,6 @@ public class activity_game extends AppCompatActivity {
 
         }else{
             questions_list = GenerateListOfQuestions();
-            random_question = GenerateRandomQuestion();
-            answers_list.add(random_question.getAnswer1());
-            answers_list.add(random_question.getAnswer2());
-            answers_list.add(random_question.getAnswer3());
-            answers_list.add(random_question.getAnswer4());
             NextQuestion();
         }
 
@@ -198,23 +193,18 @@ public class activity_game extends AppCompatActivity {
                 Log.d(TAG, "OnClick : button Next clicked");
                 if(isChecked == true) {
                     number_of_question++;
-                    random_question = GenerateRandomQuestion();
-                    answers_list.add(random_question.getAnswer1());//zapisanie odpowiedzi do listy
-                    answers_list.add(random_question.getAnswer2());
-                    answers_list.add(random_question.getAnswer3());
-                    answers_list.add(random_question.getAnswer4());
-                    btnAnswer3.setBackgroundResource(android.R.drawable.btn_default);//ustawienie przycisków na podstawowy wyglad
-                    btnAnswer2.setBackgroundResource(android.R.drawable.btn_default);
-                    btnAnswer1.setBackgroundResource(android.R.drawable.btn_default);
-                    btnAnswer4.setBackgroundResource(android.R.drawable.btn_default);
-                    btnAnswer1.setEnabled(true);//odblokowanie przycisków
-                    btnAnswer2.setEnabled(true);
-                    btnAnswer3.setEnabled(true);
-                    btnAnswer4.setEnabled(true);
-                    btnCheck.setEnabled(true);
-                    isChecked=false;//ustawienie zmiennych ponownie na domyslne
-                    player_answer="";
-                    NextQuestion();
+                    if (number_of_question == quantity_of_questions + 1) {//warunek kończący grę
+                        Intent intent = new Intent(activity_game.this, activity_endgame.class);
+                        Bundle ResultsBundle = new Bundle();
+                        ResultsBundle.putInt("quantity_of_questions", quantity_of_questions);
+                        ResultsBundle.putInt("player_points", player_points);
+                        intent.putExtras(ResultsBundle);
+                        startActivity(intent);
+                        Log.d(TAG, "openActivity_EndGame : sending quantity of questions, player points");
+                        finish();
+                    } else {
+                        NextQuestion();
+                    }
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "Nie sprawdziłeś odpowiedzi.", Toast.LENGTH_LONG).show(); //informacja o nie sprawdzeniu odp
@@ -283,17 +273,23 @@ public class activity_game extends AppCompatActivity {
     }
 
     public void NextQuestion() {
+            random_question = GenerateRandomQuestion();
+            answers_list.add(random_question.getAnswer1());//zapisanie odpowiedzi do listy
+            answers_list.add(random_question.getAnswer2());
+            answers_list.add(random_question.getAnswer3());
+            answers_list.add(random_question.getAnswer4());
+            btnAnswer3.setBackgroundResource(android.R.drawable.btn_default);//ustawienie przycisków na podstawowy wyglad
+            btnAnswer2.setBackgroundResource(android.R.drawable.btn_default);
+            btnAnswer1.setBackgroundResource(android.R.drawable.btn_default);
+            btnAnswer4.setBackgroundResource(android.R.drawable.btn_default);
+            btnAnswer1.setEnabled(true);//odblokowanie przycisków
+            btnAnswer2.setEnabled(true);
+            btnAnswer3.setEnabled(true);
+            btnAnswer4.setEnabled(true);
+            btnCheck.setEnabled(true);
+            isChecked = false;//ustawienie zmiennych ponownie na domyslne
+            player_answer = "";
 
-        if (number_of_question == quantity_of_questions + 1) {//warunek kończący grę
-            Intent intent = new Intent(activity_game.this, activity_endgame.class);
-            Bundle ResultsBundle = new Bundle();
-            ResultsBundle.putInt("quantity_of_questions", quantity_of_questions);
-            ResultsBundle.putInt("player_points", player_points);
-            intent.putExtras(ResultsBundle);
-            startActivity(intent);
-            Log.d(TAG, "openActivity_EndGame : sending quantity of questions, player points");
-            finish();
-        } else {
             question.setText(random_question.getQuestion());
             btnAnswer1.setText(GenerateRandomAnswer());
             btnAnswer2.setText(GenerateRandomAnswer());
@@ -304,7 +300,6 @@ public class activity_game extends AppCompatActivity {
             if (number_of_question == quantity_of_questions) {
                 btnNext.setText("Zakończ");
             }
-        }
     }
 
     public void HighLightButtons(boolean correct) {

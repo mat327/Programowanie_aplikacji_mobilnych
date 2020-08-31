@@ -57,7 +57,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO QUESTIONS_TABLE (ID, QUESTION, ANSWER1, ANSWER2, ANSWER3, ANSWER4, CORRECT_ANSWER) VALUES (12, '11^2 = ?', '121', '81', '144', '100', '121')");
         db.execSQL("INSERT INTO QUESTIONS_TABLE (ID, QUESTION, ANSWER1, ANSWER2, ANSWER3, ANSWER4, CORRECT_ANSWER) VALUES (13, 'Jaki owoc ma nasiona na wierzchu ?', 'czereśnia', 'jabłko', 'truskawka', 'gruszka', 'truskawka')");
 
-}
+    }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -108,7 +108,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         }
         else{
         }
-
         cursor.close();
         db.close();
         return returnList;
